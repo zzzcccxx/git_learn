@@ -61,6 +61,21 @@ git branch -vv
 git push --set-upstream <自己起的名，origin> master:master
 ```
 
+## 11. 抓取和拉取
+
+```
+git fetch 	# 只拉取不合并
+git pull 		# 拉取并合并
+```
+
+## 12. 在git clone之后对某个文件夹进行修改后，要先使用git pull看看远程是否更新了本文件，若成功pull之后再push
+
+```
+若git pull时发生冲突，则直接vim 冲突文件，进行修改，再git add git commit就可以了。当冲突解决后使用git push
+```
+
+
+
 
 
 
