@@ -22,7 +22,7 @@ git clone
 ```
 git status    # 查看当前目录下文件的状态
 git add
-git commit -m "注释"
+git commit -m "注释"    # 也可以使用git commit -am "注释"   来直接完成添加和提交
 git log    # 查看提交的记录
 git log --oneline    # 只显示一行的简洁提交记录
 git ls-files    #查看仓库状态
@@ -92,4 +92,40 @@ git push gitlab main
 # 拉取 git pull <远程仓库名> <远程分支名>:<本地分支名>
 git pull origin
 ```
+
+## 分支
+
+```
+# 创建分支，只创建不切换
+git branch 分支名
+
+# 切换分支
+git checkout 分支名
+git switch 分支名
+
+# 合并分支
+git merge 分支名    # merge后的分支名表示即将被合并的分支，当前所在分支为合并到的分支。如想合并dev到main上，先切换到main分 # 支上再使用 git merge dev。分支合并后不手动删除还是存在的
+
+# 查看分支图也可通过
+git log --graph --oneline --decorate --all
+
+# 删除分支
+git branch -d 分支名
+# 若没合并就要删除 则使用
+git branch -D 分支名
+```
+
+## 解决冲突
+
+```
+# 若在合并时出现自动合并失败可以使用 git status 和git diff来查看冲突文件和冲突内容
+vim 冲突的文件名    # 修改后在 git add 和git commit -m ""，注意commit后会直接合并，若不想继续合并，则可以使用
+git merge --abort
+
+
+# 第二种合并方法就是
+git rebase dev  # 看geekhour哔哩哔哩
+```
+
+
 
