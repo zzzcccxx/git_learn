@@ -85,7 +85,7 @@ cd ~/.ssh
 ssh localhost
 ssh-keygen 
 
-# 将~/.ssh 中的rsa_id 中的key复制到github账户中
+# 将~/.ssh 中的rsa_id.pub 中的key复制到github账户中
 ```
 
 
