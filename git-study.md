@@ -74,6 +74,20 @@ git pull 		# 拉取并合并
 若git pull时发生冲突，则直接vim 冲突文件，进行修改，再git add git commit就可以了。当冲突解决后使用git push
 ```
 
+## 13. 如果无法克隆
+
+```
+# 先使用
+cd ~/.ssh
+#若目录下有rsa_id 和rsa_id_pub则正常
+
+#若没有，则使用
+ssh localhost
+ssh-keygen 
+
+# 将~/.ssh 中的rsa_id 中的key复制到github账户中
+```
+
 
 
 
