@@ -25,7 +25,7 @@ git add
 git commit -m "注释"    # 也可以使用git commit -am "注释"   来直接完成添加和提交
 git log    # 查看提交的记录
 git log --oneline    # 只显示一行的简洁提交记录
-git ls-files    #查看仓库状态
+git ls-files    #查看暂存区的文件都有哪些
 git rm other.log    # 将other.log从版本库和工作区都删除
 git rm --cached other.log    # 将other.log从版本库中删除，但不删除工作区的文件
 ```
@@ -46,7 +46,7 @@ git reset --hard 之前版本id
 git diff    # 默认比较工作区和暂存区差异
 git diff HEAD    # 比较工作区和版本库的差异
 git diff --cached    # 比较暂存区和版本库之间的差异
-git diff HEAD~ HEAD    # 比较上一个版本和当前版本的差异 ~和^一样  HEAD~2表示HEAD之前的两个版本
+git diff HEAD~ HEAD    # 比较上一个版本和当前版本的差异 ~和^一样  HEAD~2表示HEAD之前的两个版本，其中红色为目前比上一个版本的删除，绿色为目前版本比上一版本的增加。
 git diff HEAD~ HEAD file3.txt    # 只查看file3.txt文件的版本差异
 ```
 
